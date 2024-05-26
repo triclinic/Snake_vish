@@ -64,12 +64,18 @@ int main()
         }
         
         makeStep(s);
+
         if (isFoodCollision(f)) {
+            grow(s);
             generateFood(food);
             score++;
         }
 
         paintField(f);
+        if (isSelfCollision(s)) {
+            printf("Game over! Your score: %d", score);
+            break;
+        }
         printf("Score: %d\n", score);
         Sleep(500);
     }

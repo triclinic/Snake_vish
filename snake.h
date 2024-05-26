@@ -17,5 +17,7 @@ void destroySnake(Snake*);
 
 void changeDirection(Snake*, SNAKE_COMMAND);
 void makeStep(Snake*);
+void grow(Snake*);
+bool isSelfCollision(Snake*);
 bool snakeIn(Snake*, size_t x, size_t y);
 void getSnakeRow(Snake*, char * buffer, size_t row);
